@@ -8,8 +8,10 @@
     padding: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #FAF6E3;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
     z-index: 10;
 }
 
@@ -23,16 +25,18 @@
 .menu-icon {
     font-size: 1.5rem;
     cursor: pointer;
+    position: absolute;
+    right: 1rem;
 }
 
 .sidebar {
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     width: 0;
     height: 100%;
     background: #ffffff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
     overflow-x: hidden;
     transition: width 0.5s ease;
     z-index: 100;
@@ -40,13 +44,14 @@
 
 .sidebar.active {
     width: 240px;
+    background-color: #FAF6E3;
 }
 
 .sidebar-logo-content {
     display: flex;
     align-items: center;
     padding: 1rem;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .close-icon {
