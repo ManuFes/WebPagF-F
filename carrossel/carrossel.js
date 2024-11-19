@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const totalItems = carrosselItems.length;
 
   // Ajustes de rotación
-  const rotationAngle = 360 / totalItems; // Calcula el ángulo de rotación entre cada elemento
+  const rotationAngle = 360 / totalItems; 
   let currentAngle = 0;
 
   // Función para posicionar los elementos en 3D
@@ -18,14 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Función de rotación automática
   function autoRotate() {
-    currentAngle -= rotationAngle; // Ajusta el ángulo para el siguiente ítem
+    currentAngle -= rotationAngle; 
     carrossel.style.transform = `rotateY(${currentAngle}deg)`;
   }
 
   // Inicializar el carrusel
   function initCarrossel() {
-    positionItems(); // Posiciona los elementos iniciales
-    setInterval(autoRotate, 4000); // Llama a la rotación automática cada 3 segundos
+    positionItems(); 
+    setInterval(autoRotate, 4000); 
   }
 
   // Comienza el carrusel al cargar el DOM

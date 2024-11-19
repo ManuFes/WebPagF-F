@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">F&F</div>
+        <nav>
+            <a href="../F&F.html">Inicio</a>
+            <a href="#">Categorías</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- Carrito -->
+    <section class="cart-section">
+        <h1>Tu Carrito de Compras</h1>
+        <div class="cart-container">
+            <!-- Producto en el carrito -->
+            <div class="cart-item">
+                <img src="../img/Elegant Summer Dress.png" alt="Elegant Summer Dress">
+                <div class="cart-details">
+                    <h2>Elegant Summer Dress</h2>
+                    <p class="price">€ 49.99</p>
+                    <div class="quantity-control">
+                        <button class="btn-decrease">-</button>
+                        <span class="quantity">1</span>
+                        <button class="btn-increase">+</button>
+                    </div>
+                </div>
+                <button class="btn-remove">Eliminar</button>
+            </div>
+            <!-- Más productos pueden añadirse dinámicamente -->
+        </div>
+        <div class="cart-summary">
+            <h2>Resumen</h2>
+            <p>Total: <span class="total-price">€ 49.99</span></p>
+            <button class="btn-checkout">Finalizar Compra</button>
+        </div>
+    </section>
+</body>
+</html>

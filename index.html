@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>F&F Clothing Interface</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./img/favicon.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./carrossel/carrossel.css" />
     <link rel="stylesheet" href="./sidenavbar/navbar.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap"
       rel="stylesheet"
     />
-    <script></script>
   </head>
   <body>
     <!-- Header -->
@@ -22,17 +22,14 @@
     <!-- Sidebar Navigation -->
     <div class="sidebar" id="sidebar">
       <div class="sidebar-logo-content">
-        <span class="close-icon" id="close-icon">&#10005;</span>
+          <span class="close-icon" id="close-icon">&#10005;</span>
       </div>
       <div class="sidebar-icons">
-        <span class="icon">&#128269;</span>
-        <!-- Icono de lupa -->
-        <span class="icon">&#128722;</span>
-        <!-- Icono de carrito -->
-        <span class="icon">&#128100;</span>
-        <!-- Icono de perfil de usuario -->
+          <span class="icon">&#128269;</span> <!-- Icono de lupa -->
+          <a href="./carrito/index.html" class="icon">&#128722;</a> <!-- Icono de perfil de usuario -->
+          <a href="./login/index.html" class="icon">&#128100;</a> <!-- Icono de perfil de usuario -->
       </div>
-    </div>
+  </div>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -166,11 +163,7 @@
       <h2 class="section-title">Customer Testimonials</h2>
       <div class="review-grid">
         <div class="review-card">
-          <img
-            src="./img/customer1.png"
-            alt="Customer 1"
-            class="customer-photo"
-          />
+          <img src="./img/fondo.png" alt="Customer 1" class="customer-photo" />
           <h3>GigaChad</h3>
           <br />
           <p>
@@ -227,6 +220,6 @@
     </footer>
     <script src="./carrossel/carrossel.js"></script>
     <script src="./sidenavbar/navbar.js"></script>
-    <script src="./script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,159 @@
+/* General */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #faf6e3, #d2b48c); /* Beige a marrón clarito */
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #d2b48c;
+    color: white;
+}
+
+.header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.header nav a {
+    color: white;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Carrito */
+.cart-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cart-section h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Producto en el carrito */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cart-details {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.cart-details h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.cart-details .price {
+    font-size: 1rem;
+    color: #573b8a;
+    font-weight: bold;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.quantity-control button {
+    background-color: #573b8a;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.quantity-control button:hover {
+    background-color: #6d44b8;
+}
+
+.quantity {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Botón de eliminar */
+.btn-remove {
+    background-color: #b50d0d;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-remove:hover {
+    background-color: #ff4c4c;
+}
+
+/* Resumen del carrito */
+.cart-summary {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.cart-summary h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cart-summary .total-price {
+    font-weight: bold;
+    color: #573b8a;
+}
+
+.btn-checkout {
+    background-color: #573b8a;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-checkout:hover {
+    background-color: #6d44b8;
+}
