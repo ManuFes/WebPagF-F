@@ -3,6 +3,9 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Iniciar sesión para manejar notificaciones
+session_start();
+
 // Conexión a la base de datos
 $servername = "localhost";
 $username = "root"; // Usuario por defecto de XAMPP
@@ -33,22 +36,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Verificar la contraseña
         if (password_verify($password, $user['password'])) {
-            // Redirigir a la página principal si las credenciales son correctas
-            header("Location: /WebPagF&F/");
+            // Almacenar éxito en sesión
+            $_SESSION['login_success'] = "Bienvenido, $username.";
+            header("Location: ../index.html");
             exit();
         } else {
             // Contraseña incorrecta
-            echo "Error: Contraseña incorrecta.";
+            $_SESSION['login_error'] = "Error: Contraseña incorrecta.";
         }
     } else {
         // Usuario no encontrado
-        echo "Error: El usuario no existe.";
+        $_SESSION['login_error'] = "Error: El usuario no existe.";
     }
 } else {
     // Método HTTP no permitido
-    echo "Método HTTP no permitido.";
+    $_SESSION['login_error'] = "Método HTTP no permitido.";
 }
 
 // Cerrar conexión
 $conn->close();
+
+// Redirigir a la página principal
+header("Location: ../index.html");
+exit();
 ?>

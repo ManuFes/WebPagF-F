@@ -33,5 +33,9 @@
       </form>
     </div>
   </div>
+
+  <br>
+  <!-- Notification Message -->
+  <?php include './Registros/notifications.php'; ?>
 </body>
 </html>
