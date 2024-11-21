@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 // Conexión a la base de datos
 $servername = "localhost";
 $username = "root"; // Usuario por defecto de XAMPP
-$password = ""; // Contraseña por defecto (vacía)
+$password = "F&F2024!Secure@Db"; // Contraseña que configuraste para 'root'
 $dbname = "F&F"; // Nombre de la base de datos
 
 // Crear conexión
@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "Error: El usuario no existe.";
     }
 } else {
+    // Método HTTP no permitido
     echo "Método HTTP no permitido.";
 }
 

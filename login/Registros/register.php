@@ -5,8 +5,8 @@ ini_set('display_errors', 1);
 
 // Conexión a la base de datos
 $servername = "localhost";
-$username = "root"; // Usuario por defecto de XAMPP
-$password = ""; // Contraseña por defecto (vacía)
+$username = "root"; // Usuario configurado en MySQL
+$password = "F&F2024!Secure@Db"; // Contraseña del usuario
 $dbname = "F&F"; // Nombre de la base de datos
 
 // Crear conexión
@@ -33,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         // Insertar datos en la tabla usuarios
         $sql = "INSERT INTO usuarios (username, email, password) VALUES ('$username', '$email', '$password')";
-
         if ($conn->query($sql) === TRUE) {
             echo "Registro exitoso.";
         } else {

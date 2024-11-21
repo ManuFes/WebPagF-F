@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="icon" href="../img/favicon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="logo">F&F</div>
-        <nav>
-            <a href="../F&F.html">Inicio</a>
-            <a href="#">Categorías</a>
-            <a href="#">Contacto</a>
-        </nav>
-    </header>
+  <header class="header">
+    <div class="logo">F&F</div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="carrito.html" class="active">Carrito</a>
+    </nav>
+  </header>
 
-    <!-- Carrito -->
-    <section class="cart-section">
-        <h1>Tu Carrito de Compras</h1>
-        <div class="cart-container">
-            <!-- Producto en el carrito -->
-            <div class="cart-item">
-                <img src="../img/Elegant Summer Dress.png" alt="Elegant Summer Dress">
-                <div class="cart-details">
-                    <h2>Elegant Summer Dress</h2>
-                    <p class="price">€ 49.99</p>
-                    <div class="quantity-control">
-                        <button class="btn-decrease">-</button>
-                        <span class="quantity">1</span>
-                        <button class="btn-increase">+</button>
-                    </div>
-                </div>
-                <button class="btn-remove">Eliminar</button>
-            </div>
-            <!-- Más productos pueden añadirse dinámicamente -->
+  <div class="shopping-cart">
+    <h2 class="cart-title">Tu Carrito</h2>
+    <div class="cart-items">
+      <!-- Ejemplo de un producto -->
+      <div class="cart-item">
+        <img src="../img/Casual T-Shirt.png" alt="Camiseta Básica" class="cart-item-image">
+        <div class="cart-item-details">
+          <h3 class="cart-item-name">Camiseta Básica</h3>
+          <p class="cart-item-price">€19.99</p>
+          <div class="cart-item-actions">
+            <button class="btn-decrement">-</button>
+            <span class="item-quantity">1</span>
+            <button class="btn-increment">+</button>
+          </div>
         </div>
-        <div class="cart-summary">
-            <h2>Resumen</h2>
-            <p>Total: <span class="total-price">€ 49.99</span></p>
-            <button class="btn-checkout">Finalizar Compra</button>
-        </div>
-    </section>
+        <button class="btn-remove">Eliminar</button>
+      </div>
+    </div>
+    <div class="cart-summary">
+      <p>Total: <span class="cart-total">€19.99</span></p>
+      <button class="btn-primary checkout-btn">Ir a Pagar</button>
+    </div>
+  </div>
+  
+
+  <footer class="footer">
+    <p>&copy; 2024 F&F Clothing. Todos los derechos reservados.</p>
+  </footer>
 </body>
 </html>
