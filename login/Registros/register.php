@@ -1,4 +1,7 @@
 <?php
+// Iniciar sesión para manejar mensajes de notificación
+session_start();
+
 // Mostrar errores para depuración
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -29,18 +32,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = $conn->query($checkEmailQuery);
 
     if ($result->num_rows > 0) {
-        echo "Error: El correo ya está registrado.";
+        $_SESSION['register_error'] = "Error: El correo ya está registrado.";
     } else {
         // Insertar datos en la tabla usuarios
         $sql = "INSERT INTO usuarios (username, email, password) VALUES ('$username', '$email', '$password')";
         if ($conn->query($sql) === TRUE) {
-            echo "Registro exitoso.";
+            $_SESSION['register_success'] = "¡Registro exitoso! Ahora puedes iniciar sesión.";
         } else {
-            echo "Error al registrar: " . $conn->error;
+            $_SESSION['register_error'] = "Error al registrar: " . $conn->error;
         }
     }
-} else {
-    echo "Método HTTP no permitido.";
+
+    // Redirigir de vuelta a la página de registro para mostrar el mensaje
+    header("Location: register.php");
+    exit();
 }
 
 // Cerrar conexión
