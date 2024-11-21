@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Redirigir de vuelta a la página de registro para mostrar el mensaje
-    header("Location: register.php");
+    // header("Location: /login/index.html");
     exit();
 }
 
