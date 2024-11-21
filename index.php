@@ -1,3 +1,9 @@
+<?php
+session_start();
+$loginMessage = isset($_SESSION['login_success']) ? $_SESSION['login_success'] : '';
+unset($_SESSION['login_success']); // Limpiar la sesión después de usar el mensaje
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -14,6 +20,7 @@
     />
   </head>
   <body>
+
     <!-- Header -->
     <header class="header">
       <span class="menu-icon" id="menu-icon">&#9776;</span>
@@ -221,5 +228,9 @@
     <script src="./carrossel/carrossel.js"></script>
     <script src="./sidenavbar/navbar.js"></script>
     <script src="./js/script.js"></script>
+    <script>
+    const loginMessage = <?php echo json_encode($loginMessage); ?>;
+    </script>
+    <script src="./js/notification.js"></script>
   </body>
 </html>

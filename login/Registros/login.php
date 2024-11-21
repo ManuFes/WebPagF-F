@@ -8,8 +8,8 @@ session_start();
 
 // Conexión a la base de datos
 $servername = "localhost";
-$username = "root"; // Usuario por defecto de XAMPP
-$password = "F&F2024!Secure@Db"; // Contraseña que configuraste para 'root'
+$username = "root"; // Usuario configurado
+$password = "F&F2024!Secure@Db"; // Contraseña configurada
 $dbname = "F&F"; // Nombre de la base de datos
 
 // Crear conexión
@@ -37,26 +37,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Verificar la contraseña
         if (password_verify($password, $user['password'])) {
             // Almacenar éxito en sesión
-            $_SESSION['login_success'] = "Bienvenido, $username.";
-            header("Location: ../index.html");
+            $_SESSION['login_success'] = "Logueo exitoso, bienvenido $username.";
+            header("Location: ../../index.php"); // Redirigir al index.php del directorio raíz
             exit();
         } else {
             // Contraseña incorrecta
             $_SESSION['login_error'] = "Error: Contraseña incorrecta.";
+            header("Location: ./index.php"); // Volver al login si hay error
+            exit();
         }
     } else {
         // Usuario no encontrado
         $_SESSION['login_error'] = "Error: El usuario no existe.";
+        header("Location: ./index.php"); // Volver al login si hay error
+        exit();
     }
 } else {
     // Método HTTP no permitido
     $_SESSION['login_error'] = "Método HTTP no permitido.";
+    header("Location: ./index.php"); // Volver al login si hay error
+    exit();
 }
 
 // Cerrar conexión
 $conn->close();
-
-// Redirigir a la página principal
-header("Location: ../index.html");
-exit();
 ?>
